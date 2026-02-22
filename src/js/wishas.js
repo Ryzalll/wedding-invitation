@@ -94,7 +94,7 @@ export const wishas = () => {
             if (comentar.length > 0) {
                 peopleComentar.textContent = `${comentar.length} Orang telah mengucapkan`;
             } else {
-                peopleComentar.textContent = `Belum ada yang mengucapkan`;
+                peopleComentar.textContent = `Jadilah orang pertama yang mengucapkan`;
             }
 
             pageNumber.textContent = '1';

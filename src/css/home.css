@@ -37,7 +37,7 @@
 .home figure figcaption {
     margin: 0 0 0.5rem;
     font-weight: 400;
-    font-family: var(--sacramento);
+    font-family: var(--butler);
     font-size: var(--fontSize-heading-lg);
 }
 

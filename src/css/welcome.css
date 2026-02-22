@@ -54,7 +54,7 @@
 
 .welcome figure figcaption {
     font-size: var(--fontSize-heading-base);
-    font-family: var(--sacramento);
+    font-family: var(--butler);
     font-weight: 400;
     margin-top: 0.5rem;
 }

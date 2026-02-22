@@ -1,12 +1,19 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../fonts/Butler_Light_Stencil.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
     --primary-font-color: '#2b6eb1';
     --bg-color: #ffd6dd;
-
     --fontSize-heading-lg: 3rem;
     --fontSize-heading-base: 2.8rem;
     --fontSize-text-base: 1rem;
-
+    
     --sacramento: Sacramento, cursive;
+    --butler: 'CustomFont', serif;
     --arabic: 'Noto Naskh Arabic', serif;
 
     --shadow-md: 0 0 10px rgba(0, 0, 0, 0.3);

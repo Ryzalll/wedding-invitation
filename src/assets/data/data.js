@@ -37,8 +37,8 @@ export const data = {
             date: '09',
             day: 'Kamis',
             hours: {
-                start: '10.00',
-                finish: '12.00'
+                start: '16.00',
+                finish: 'Selesai'
             }
         },
         address: 'Jl. Ibrahim Zahier II Gg 3 No. 38 (Rumah Mita)'
@@ -87,7 +87,7 @@ export const data = {
         },
     ],
 
-    audio: './src/assets/audio/wedding.mp3',
+    audio: './src/assets/audio/nadhif2.mp3',
 
     api: 'https://script.google.com/macros/s/AKfycbxs7lxRNsKkuMIF7xmR7lRl3a78JdwXeIOjBz2k0NggvyYxHN1F0tXdghXkbLLz77bygA/exec',
 
