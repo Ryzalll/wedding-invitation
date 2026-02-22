@@ -2,18 +2,18 @@ export const data = {
     bride: {
         L: {
             id: 1,
-            name: 'Lorem Ipsum',
-            child: 'Putra ke lorem',
-            father: 'Lorem',
-            mother: 'Ipsum',
+            name: 'Muhammad Ainun Najib',
+            child: 'Putra ke 3',
+            father: 'Muslich',
+            mother: 'Imyati',
             image: './src/assets/images/cowo.png'
         },
         P: {
             id: 2,
-            name: 'Ipsum Lorem',
-            child: 'Putri ke lorem',
-            father: 'Lorem',
-            mother: 'Ipsum',
+            name: 'Permita Dwi Indah Sari',
+            child: 'Putri ke 2',
+            father: 'Sunangto',
+            mother: 'Nur Rohimah',
             image: './src/assets/images/cewe.png'
         },
 
@@ -22,62 +22,62 @@ export const data = {
 
     time: {
         marriage: {
-            year: '2030',
-            month: 'November',
-            date: '14',
+            year: '2026',
+            month: 'April',
+            date: '09',
             day: 'Kamis',
             hours: {
                 start: '08.00',
-                finish: 'Selesai'
+                finish: '09.00'
             }
         },
         reception: {
-            year: '2024',
-            month: 'November',
-            date: '14',
+            year: '2026',
+            month: 'April',
+            date: '09',
             day: 'Kamis',
             hours: {
-                start: '11.00',
-                finish: 'Selesai'
+                start: '10.00',
+                finish: '12.00'
             }
         },
-        address: 'Kp. Lorem, RT 000/ RW 000, Desa.Lorem, Kec.Ipsum, Kab.Lorem, Lorem (1234)'
+        address: 'Jl. Ibrahim Zahier II Gg 3 No. 38 (Rumah Mita)'
     },
 
     link: {
         calendar: 'https://calendar.app.google/oSVLRMYC79GzuA4f9',
-        map: 'https://maps.app.goo.gl/q1Ask2Jgd4ekiiKBA',
+        map: 'https://maps.app.goo.gl/CED6iy45FPWhGMLi6',
     },
 
     galeri: [
         {
             id: 1,
-            image: './src/assets/images/1.png'
+            image: './src/assets/images/1.JPG'
         },
         {
             id: 2,
-            image: './src/assets/images/2.png'
+            image: './src/assets/images/2.JPG'
         },
         {
             id: 3,
-            image: './src/assets/images/3.png'
+            image: './src/assets/images/3.JPG'
         },
         {
             id: 4,
-            image: './src/assets/images/4.png'
+            image: './src/assets/images/4.JPG'
         },
         {
             id: 5,
-            image: './src/assets/images/5.png'
+            image: './src/assets/images/5.JPG'
         }
     ],
 
     bank: [
         {
             id: 1,
-            name: 'Lorem Ipsum',
-            icon: './src/assets/images/bca.png',
-            rekening: '12345678'
+            name: 'Permita Dwi Indah Sari',
+            icon: './src/assets/images/mandiri.png',
+            rekening: '1780006323402'
         },
         {
             id: 2,
@@ -89,7 +89,7 @@ export const data = {
 
     audio: './src/assets/audio/wedding.mp3',
 
-    api: 'https://script.google.com/macros/s/AKfycbyydz6N4p2VWUG8zsXeURv6ap9RP8a4eC3x6N3x6qTDjMVr1cIBz9S0NsHw2rWvBOSXGg/exec',
+    api: 'https://script.google.com/macros/s/AKfycbxs7lxRNsKkuMIF7xmR7lRl3a78JdwXeIOjBz2k0NggvyYxHN1F0tXdghXkbLLz77bygA/exec',
 
     navbar: [
         {

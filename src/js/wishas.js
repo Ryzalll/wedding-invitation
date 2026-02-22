@@ -16,11 +16,12 @@ export const wishas = () => {
     const buttonForm = form.children[6];
     const pageNumber = wishasContainer.querySelector('.page-number');
     const [prevButton, nextButton] = wishasContainer.querySelectorAll('.button-grup button');
+    console.log('wishas init:', { form, peopleComentar, containerComentar, buttonForm, pageNumber, prevButton, nextButton });
 
     const listItemBank = (data) => (
-        `  <figure data-aos="zoom-in" data-aos-duration="1000">
+        `  <figure style="background-color: #ffffff" data-aos="zoom-in" data-aos-duration="1000">
                 <img src=${data.icon} alt="bank icon animation">
-                <figcaption>No. Rekening ${data.rekening.slice(0, 4)}xxxx <br>A.n ${data.name}</figcaption>
+                <figcaption>No. Rekening ${data.rekening}<br>A.n ${data.name}</figcaption>
                 <button data-rekening=${data.rekening} aria-label="copy rekening">Salin No. Rekening</button>
            </figure>`
     );
@@ -81,8 +82,11 @@ export const wishas = () => {
         pageNumber.textContent = '..';
 
         try {
+            console.log('sebelum fetch');
             const response = await comentarService.getComentar();
+            console.log('response:', response);
             const {comentar} = response;
+            console.log('comentar:', comentar);
 
             lengthComentar = comentar.length;
             comentar.reverse();
@@ -115,7 +119,7 @@ export const wishas = () => {
 
         try {
             const response = await comentarService.getComentar();
-
+            console.log('response', response);
             await comentarService.addComentar(comentar);
 
             lengthComentar = response.comentar.length;
@@ -176,6 +180,8 @@ export const wishas = () => {
         }
     });
 
-    initialComentar().then();
-    initialBank();
+    setTimeout(() => {
+        initialComentar().then();
+        initialBank();
+    }, 500);
 };
