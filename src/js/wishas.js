@@ -12,19 +12,15 @@ import {comentarService} from "../services/comentarService.js";
 export const wishas = () => {
     const wishasContainer = document.querySelector('.wishas');
     
-    // 1. Selector Form (Aman)
     const form = wishasContainer.querySelector('form');
     const buttonForm = form.querySelector('button[type="submit"]');
     
-    // 2. Selector Komentar (Aman & Akurat)
-    // Langsung mencari <ul> list komentar, lalu naik ke elemen pembungkusnya (parent)
     const containerComentar = wishasContainer.querySelector('ul[aria-label="list comentar"]');
     const divKomentar = containerComentar.parentElement; 
     
     const peopleComentar = divKomentar.querySelector('p');
     const pageNumber = divKomentar.querySelector('.page-number');
     
-    // Mengambil tombol prev dan next
     const paginationButtons = divKomentar.querySelectorAll('.button-grup button');
     const prevButton = paginationButtons[0];
     const nextButton = paginationButtons[1];
@@ -38,7 +34,6 @@ export const wishas = () => {
     );
 
     const initialBank = () => {
-        // Mencari pembungkus "Love Gift" berdasarkan <h2> pertama, lalu mengambil div kosong di dalamnya
         const loveGiftContainer = wishasContainer.querySelector('h2').parentElement;
         const containerBank = loveGiftContainer.querySelector('div'); 
 
@@ -77,13 +72,13 @@ export const wishas = () => {
         }
 
         return ` <li data-aos="zoom-in" data-aos-duration="1000">
-                     <div style="background-color: ${data.color}">${data.name.charAt(0).toUpperCase()}</div>
-                     <div>
-                         <h4>${name}</h4>
-                         <p>${date} <br>${data.status}</p>
-                         <p>${data.message}</p>
-                     </div>
-                 </li>`;
+                    <div style="background-color: ${data.color}">${data.name.charAt(0).toUpperCase()}</div>
+                    <div>
+                        <h4>${name}</h4>
+                        <p>${date} <br>${data.status}</p>
+                        <p>${data.message}</p>
+                    </div>
+                </li>`;
     };
 
     let lengthComentar;
@@ -142,7 +137,6 @@ export const wishas = () => {
         }
     });
 
-    // click prev & next
     let currentPage = 1;
     let itemsPerPage = 4;
     let startIndex = 0;
