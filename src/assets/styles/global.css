@@ -22,7 +22,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
     scrollbar-width: none !important;
 }
 
@@ -36,8 +36,38 @@ html {
 
 body {
     font-family: 'Josefin Sans', sans-serif;
-    color: var(--primary-font-color);
+    color: var(--primary-font-color); /* Memakai warna biru dari variabel Anda */
     overflow-y: hidden;
+    
+    /* --- BACKGROUND PUTIH MOTIF GARIS MIRING --- */
+    background-color: #ffffff;
+    background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        #eaeaea 10px, /* Warna garis abu-abu sangat muda */
+        #eaeaea 11px  /* Ketebalan garis 1px */
+    );
+}
+
+/* --- CSS UNTUK HIASAN SUDUT BUNGA --- */
+.corner-flower {
+    position: fixed; /* Membuat bunga tetap di tempat saat halaman di-scroll */
+    width: 400px; /* Atur ukuran bunga (bisa dibesarkan/dikecilkan sesuai selera) */
+    z-index: 9999; /* Memastikan bunga selalu berada di lapisan paling atas */
+    pointer-events: none; /* SANGAT PENTING: Agar bunga tidak menghalangi tombol saat di-klik */
+    opacity: 0.8; /* Opsional: Membuat bunga sedikit transparan agar tidak terlalu mencolok */
+}
+
+.top-left {
+    top: -20px;
+    left: -20px;
+}
+
+.bottom-right {
+    bottom: -20px;
+    right: -20px;
+    transform: rotate(180deg); /* Memutar gambar 180 derajat untuk sudut kanan bawah */
 }
 
 body.active {

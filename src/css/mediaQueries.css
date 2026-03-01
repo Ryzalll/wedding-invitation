@@ -1,6 +1,9 @@
 @media screen and (max-width: 768px) {
+    .corner-flower {
+        width: 170px; 
+    }
     header nav {
-        display: flex;
+        display: none;
     }
 
     .home svg {
@@ -59,6 +62,10 @@
     .time a + p + i {
         right: 1.4rem;
         top: 16rem;
+    }
+
+    .time iframe {
+        width: 90%;
     }
 
     .galeri {
@@ -125,6 +132,19 @@
         left: 3rem;
     }
 
+    .foto-galeri-utama {.foto-galeri-utama {
+        /* scale(1.15) berarti zoom in 15% */
+        /* translateY(20px) menggeser gambar ke bawah 20px */
+        transform: scale(1.15) translateY(20px);
+        
+        /* Tambahan agar gambar tetap proporsional dan memenuhi frame */
+        object-fit: cover;
+        
+        /* Opsional: Membuat efek zoom terlihat halus (smooth) */
+        transition: transform 0.3s ease-in-out;
+    }
+    }
+
     .wishas {
         padding: 1rem 1.4rem 2rem;
         margin-top: -14rem;
@@ -168,7 +188,7 @@
     }
 
     .wishas svg:nth-of-type(2) {
-        bottom: -5rem;
+        bottom: -7rem;
     }
 
     .audio button {

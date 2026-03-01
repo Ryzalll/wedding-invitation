@@ -2,9 +2,9 @@ import { data } from "../assets/data/data.js";
 
 export const time = () => {
     const timeContainer = document.querySelector('.time');
-    const [marriageDiv, receptionDiv] = timeContainer.querySelectorAll('div div');
+    const [marriageDiv, receptionDiv] = timeContainer.querySelectorAll('.container > div > div');
     const mapLink = timeContainer.querySelector('a');
-    const addressParagraph = timeContainer.querySelector('iframe + p');
+    const addressParagraph = timeContainer.querySelectorAll('p')[1];
 
     const createTimeListItem = (title, details) => (
         `<h3>${title}</h3>

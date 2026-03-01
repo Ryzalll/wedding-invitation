@@ -5,14 +5,16 @@
     padding: 4rem 8rem 12rem;
     margin-top: -6rem;
     position: relative;
+    background-color: #ffd6dd;
 }
 
 .galeri .container {
     width: 100%;
     padding: 0 1.5rem 2rem;
-    border-radius: 50px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -1px 1px rgba(0, 0, 0, 0.1);
     position: relative;
+    background-color: white;
 }
 
 .galeri .container h2, .galeri div:nth-of-type(2) h2 {

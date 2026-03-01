@@ -11,12 +11,23 @@ import {comentarService} from "../services/comentarService.js";
 
 export const wishas = () => {
     const wishasContainer = document.querySelector('.wishas');
-    const [_, form] = wishasContainer.children[2].children;
-    const [peopleComentar, ___, containerComentar] = wishasContainer.children[3].children;
-    const buttonForm = form.children[6];
-    const pageNumber = wishasContainer.querySelector('.page-number');
-    const [prevButton, nextButton] = wishasContainer.querySelectorAll('.button-grup button');
-    console.log('wishas init:', { form, peopleComentar, containerComentar, buttonForm, pageNumber, prevButton, nextButton });
+    
+    // 1. Selector Form (Aman)
+    const form = wishasContainer.querySelector('form');
+    const buttonForm = form.querySelector('button[type="submit"]');
+    
+    // 2. Selector Komentar (Aman & Akurat)
+    // Langsung mencari <ul> list komentar, lalu naik ke elemen pembungkusnya (parent)
+    const containerComentar = wishasContainer.querySelector('ul[aria-label="list comentar"]');
+    const divKomentar = containerComentar.parentElement; 
+    
+    const peopleComentar = divKomentar.querySelector('p');
+    const pageNumber = divKomentar.querySelector('.page-number');
+    
+    // Mengambil tombol prev dan next
+    const paginationButtons = divKomentar.querySelectorAll('.button-grup button');
+    const prevButton = paginationButtons[0];
+    const nextButton = paginationButtons[1];
 
     const listItemBank = (data) => (
         `  <figure style="background-color: #ffffff" data-aos="zoom-in" data-aos-duration="1000">
@@ -27,8 +38,9 @@ export const wishas = () => {
     );
 
     const initialBank = () => {
-        const wishasBank = wishasContainer.children[1];
-        const [_, __, containerBank] = wishasBank.children;
+        // Mencari pembungkus "Love Gift" berdasarkan <h2> pertama, lalu mengambil div kosong di dalamnya
+        const loveGiftContainer = wishasContainer.querySelector('h2').parentElement;
+        const containerBank = loveGiftContainer.querySelector('div'); 
 
         renderElement(data.bank, containerBank, listItemBank);
 
@@ -82,11 +94,8 @@ export const wishas = () => {
         pageNumber.textContent = '..';
 
         try {
-            console.log('sebelum fetch');
             const response = await comentarService.getComentar();
-            console.log('response:', response);
             const {comentar} = response;
-            console.log('comentar:', comentar);
 
             lengthComentar = comentar.length;
             comentar.reverse();
@@ -119,7 +128,6 @@ export const wishas = () => {
 
         try {
             const response = await comentarService.getComentar();
-            console.log('response', response);
             await comentarService.addComentar(comentar);
 
             lengthComentar = response.comentar.length;

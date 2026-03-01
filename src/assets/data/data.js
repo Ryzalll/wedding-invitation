@@ -6,7 +6,7 @@ export const data = {
             child: 'Putra ke 3',
             father: 'Muslich',
             mother: 'Imyati',
-            image: './src/assets/images/cowo.png'
+            image: './src/assets/images/aynun.png'
         },
         P: {
             id: 2,
@@ -14,10 +14,10 @@ export const data = {
             child: 'Putri ke 2',
             father: 'Sunangto',
             mother: 'Nur Rohimah',
-            image: './src/assets/images/cewe.png'
+            image: './src/assets/images/mitos.png'
         },
 
-        couple: './src/assets/images/couple.png'
+        couple: './src/assets/images/couplereal2.png'
     },
 
     time: {
@@ -28,7 +28,7 @@ export const data = {
             day: 'Kamis',
             hours: {
                 start: '08.00',
-                finish: '09.00'
+                finish: 'Selesai'
             }
         },
         reception: {
@@ -81,9 +81,9 @@ export const data = {
         },
         {
             id: 2,
-            name: 'Ipsum Lorem',
-            icon: './src/assets/images/bri.png',
-            rekening: '12345678'
+            name: 'Permita Dwi Indah Sari',
+            icon: './src/assets/images/bca.png',
+            rekening: '7901734805'
         },
     ],
 
