@@ -24,10 +24,10 @@ export const welcome = () => {
         const params = getQueryParameter('to');
 
         if (params) {
-            weddingToElement.innerHTML = `Kepada Yth Bapak/Ibu/Saudara/i<br><span>${params}</span>`;
+            weddingToElement.innerHTML = `Kepada Yth<span>${params}</span>`;
             name.value = params;
         } else {
-            weddingToElement.innerHTML = `Kepada Yth Bapak/Ibu/Saudara/i<br><span>Teman-teman semua</span>`;
+            weddingToElement.innerHTML = `Kepada Yth<span>Teman-teman semua</span>`;
         }
     }
 
