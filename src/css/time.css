@@ -39,6 +39,11 @@
     margin-top: 2rem;
 }
 
+.time .container .our-day {
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
 .time a {
     padding: 0.5rem 1rem;
     color: #000;
