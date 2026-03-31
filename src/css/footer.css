@@ -5,7 +5,7 @@ footer {
     text-align: center;
 }
 
-footer h2 {
+footer h2,footer h1  {
     font-size: var(--fontSize-heading-base);
     font-family: var(--sacramento);
     font-weight: 400;
